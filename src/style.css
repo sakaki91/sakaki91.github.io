@@ -11,34 +11,8 @@ a{
     color: #cecece;
     text-decoration: none;
 }
-.main{
-    text-align: center;
-    font-size: 150%;
-    position: fixed;
-    width: 100%;
-    top: 3%;
-}
-.title{
-    font-size: 75%;
-    font-family: Type Machine;
-    text-align: center;
-    position: fixed;
-    left: 30%;
-    right: 30%;
-}
 .content{
-    padding: 0.5%;
-    border-radius: 10px;
-    margin-top: 2%;
+    width: 50%;
+    margin: 0 auto;
     font-size: 70%;
-    position: fixed;
-    text-align: center;
-    left: 30%;
-    right: 30%;
-}
-footer {
-    text-align: center;
-    position: fixed;
-    bottom: 3%;
-    width: 100%;
 }
