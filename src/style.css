@@ -12,6 +12,7 @@ a{
     text-decoration: none;
 }
 .content{
+    text-allign: left;
     width: 50%;
     margin: 0 auto;
     font-size: 70%;
