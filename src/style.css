@@ -4,17 +4,24 @@
 }
 body{
     font-family: 'Type Machine', sans-serif;
-    background-color: #161616;
-    color: #cecece;
+    background-color: #0c0c0c;
+    color: #ffffff;
 }
 a{
-    color: #cecece;
+    color: #ffffff;
     text-decoration: none;
 }
+.main{
+    font-size: 130%;
+    font-family: Type Machine;
+    text-decoration: underline;
+    text-align: left;
+    margin-top: 1%;
+    margin-left: 1%
+}
 .content{
-    width: 45%;
     text-align: left;
     width: 50%;
-    margin: 0 auto;
-    font-size: 70%;
+    margin-left: 1%;
+    font-size: 100%;
 }
