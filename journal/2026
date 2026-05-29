@@ -1,0 +1,21 @@
+#01 - [ 28/05/2026 - 22:30PM ]:
+===============================
+
+I started exploring the idea of ​​a "Journal" using a plain text style.
+And I confess that after leaving Markdown aside, the simple text aesthetic appeals to me quite a bit.
+
+I recently unarchived my old projects (Sakaki-AC-Linux-Guide and EFI-Haswell-RX550-Lexa);
+while in the AC guide I included an experimental autoinstall script, and rewrote the README in the classic style.
+
+As for EFI-Haswell-RX550-Lexa, I only corrected some typos.
+
+Meanwhile, AWL (Arcade.Wrapper-Linux) has been giving me a lot of trouble, precisely because I'm mapping something difficult
+(especially for me), completely alone. I've been procrastinating a lot lately, and some specific titles scare me, as does the idea that Linux is extremely fragmented.
+
+And because at any moment something could break, and I might not be able to fix it again, that's precisely why I maintain the GPL3, because unlike the MIT License (which I use in Dotfiles), this should remain free, and if I disappear in the future, anyone can continue from where I left off.
+
+You can check the latest changes at:
+------------------------------------
+* Sakaki-AC-Linux-Guide: https://github.com/sakaki91/Sakaki-AC-Linux-Guide
+* EFI-Haswell-RX550-Lexa: https://github.com/sakaki91/EFI-Haswell-RX550-Lexa
+* Arcade.Wrapper-Linux: https://github.com/sakaki91/Arcade.Wrapper-Linux
