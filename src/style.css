@@ -1,15 +1,13 @@
 @font-face {
-  font-family: 'Type Machine';
-  src: url('tm.ttf') format('woff2');
+  font-family: 'IosevkaNerdFontMono-Regular';
+  src: url('IosevkaNerdFontMono-Regular.ttf') format('woff2');
 }
 body{
-    font-family: 'Type Machine', sans-serif;
-    background-color: #0c0c0c;
-    color: #ffffff;
+    font-family: 'IosevkaNerdFontMono-Regular', sans-serif;
 }
 a{
-    color: #ffffff;
-    text-decoration: none;
+    color: #000000;
+    text-decoration: underline;
 }
 .main{
     font-size: 130%;
@@ -21,7 +19,7 @@ a{
 }
 .content{
     text-align: left;
-    width: 50%;
+    width: 70%;
     margin-left: 1%;
     font-size: 100%;
 }
