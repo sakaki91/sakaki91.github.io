@@ -1,4 +1,18 @@
-#01 - [ 28/05/2026 - 22:30PM ]:
+#02 - [ 06/01/2026 - 14:49 ]:
+=============================
+
+Today, I started a new project, but I got so tired and hyper-focused that I even forgot to talk about it in my Journal.
+It's nothing extremely complex, but it's extremely necessary.
+Initially, all my projects start as a solution to my own problems, but I always keep the code open and public in case someone is interested or has a similar problem.
+Anyway... the project's name is Vault. It's an extremely small and lightweight "mini launcher CLI" for games and programs, being extremely useful for non-Steam games and old Wine games, but completely usable in modern games, as long as the user knows how to prepare their own prefix after Vault creates it.
+
+* vault: https://github.com/sakaki91/vault
+
+
+///////////////////////////////
+
+
+#01 - [ 05/28/2026 - 22:30PM ]:
 ===============================
 
 I started exploring the idea of ​​a "Journal" using a plain text style.
