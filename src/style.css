@@ -1,26 +1,29 @@
 @font-face {
-  font-family: 'IosevkaNerdFontMono-Regular';
-  src: url('IosevkaNerdFontMono-Regular.ttf') format('woff2');
+  font-family: 'Arial, Verdana, Times New Roman';
 }
 body{
-    font-family: 'IosevkaNerdFontMono-Regular', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 100%;
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 10%;
+    color: #333333;
+}
+#name{
+    font-size: 300%;
+    margin-bottom: 0%;
+}
+#bar{
+    margin-bottom: 1%;
 }
 a{
-    font-family: 'IosevkaNerdFontMono-Regular', sans-serif;
-    color: #000000;
-    text-decoration: underline;
-}
-.main{
-    font-size: 130%;
-    font-family: Type Machine;
-    text-decoration: underline;
-    text-align: left;
-    margin-top: 1%;
-    margin-left: 1%
+    color: #001caa;
+    text-decoration: none;
+    font-size: 110%;
 }
 .content{
     text-align: left;
-    width: 70%;
-    margin-left: 1%;
+    width: 50%;
     font-size: 100%;
+    margin-bottom: 3%;
 }
