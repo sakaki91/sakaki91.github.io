@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Arial, Verdana, Times New Roman';
+  font-family: 'TNR';
+  src: url('times.ttf');
 }
 body{
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'TNR', sans-serif;
     font-size: 100%;
     text-align: left;
     margin-top: 3%;
