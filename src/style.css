@@ -17,6 +17,10 @@ body{
 #bar{
     margin-bottom: 1%;
 }
+#journal-bar{
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
 a{
     color: #001caa;
     text-decoration: none;
@@ -24,7 +28,14 @@ a{
 }
 .content{
     text-align: left;
-    width: 50%;
+    width: 65%;
     font-size: 100%;
     margin-bottom: 3%;
+}
+.journal{
+    text-align: left;
+    width: 65%;
+    font-size: 100%;
+    margin-bottom: 3%;
+    margin-left: 2%;
 }
