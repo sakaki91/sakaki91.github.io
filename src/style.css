@@ -10,6 +10,9 @@ body{
     margin-left: 10%;
     color: #333333;
 }
+h3{
+    margin-bottom: 0.5%;
+}
 #name{
     font-size: 300%;
     margin-bottom: 0%;
@@ -38,4 +41,10 @@ a{
     font-size: 100%;
     margin-bottom: 3%;
     margin-left: 2%;
+}
+.maya-wiki-content{
+    text-align: left;
+    width: 65%;
+    font-size: 100%;
+    margin-bottom: 3%;
 }

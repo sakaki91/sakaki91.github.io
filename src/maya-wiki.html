@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.8">
+        <title>
+            Maya
+        </title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+            <div id="name">Sakaki</div>
+            <div id="bar">
+                <a href="../index.html">Projects</a> :: <a href="journal/2026.html">Journal</a> :: <a href="88x31.html">88x31</a> :: <a href="contact.html">Contact</a>
+            </div>
+            <div class="maya-wiki-content">
+                <h3 style="text-decoration: underline;">What is Maya?</h3>
+                Maya is a standalone package manager written in bash, which follows the same scheme as ports, for example.<br>
+                It uses pre-built recipes to download, check dependencies, compile and install binaries<br>
+                And, if removal is necessary, it also removes the binaries and all traces they leave behind.<br><br>
+                Below you will find an example of installation and recipe.<br>
+                <pre>   $ maya --about make
+     make :: 4.4.1             GNU make source code.
+   $ maya --install make
+     # [the entire compilation and installation process...] </pre>
+    And removing it becomes equally simple:<br>
+    <pre>   $ maya --remove make </pre>
+    And below is an example recipe:<br>
+    <pre>   $ cat ~/.local/share/maya/pkg/make 
+     
+     #!/bin/bash
+
+     NAME="make"
+     VERSION="4.4.1"
+     DESCRIPTION="GNU make source code."
+     SOURCE="https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.gz"
+     DEPENDENCIES=(
+         "wget"
+         "tar"
+         "gcc"
+     )
+
+     function install(){
+         wget -c $SOURCE --directory-prefix=/tmp/maya/$NAME
+         tar -xvf /tmp/maya/$NAME/$NAME-$VERSION.tar.gz --directory=/tmp/maya/$NAME
+         (
+             cd /tmp/maya/$NAME/$NAME-$VERSION
+             sudo ./configure --disable-dependency-tracking
+             sudo ./build.sh
+             sudo ./make
+             sudo ./make install
+         )
+     }
+
+     function remove(){
+         LOCALE="/usr/local/share/locale"
+         sudo rm -f /usr/local/bin/make
+         sudo rm -f /usr/local/include/gnumake.h
+         sudo rm -f /usr/local/share/man/man1/make.1
+         sudo rm -f /usr/local/share/info/{make.info,make.info-1,make.info-2,make.info-3}
+         sudo rm -rf $LOCALE/be/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/bg/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/cs/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/da/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/de/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/es/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/fi/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/fr/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/ga/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/gl/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/he/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/hr/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/id/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/it/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/ja/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/ko/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/lt/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/nl/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/pl/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/pt/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/pt_BR/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/ro/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/ru/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/sr/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/sv/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/tr/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/uk/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/vi/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/zh_CN/LC_MESSAGES/make.mo
+         sudo rm -rf $LOCALE/zh_TW/LC_MESSAGES/make.mo 
+     } </pre>
+     This means that ANYONE can contribute if they want, without actually needing a ready-made repository, as long as everything is filled in correctly.<br>
+     If you are interested, there is a <strong>package-template.sh</strong> file in <strong>~/.local/share/maya/src/package-template.sh</strong><br><br>
+                You can find the source code for maya <a href="https://github.com/sakaki91/maya" target="_blank">here.</a>
+            </div>
+    </body>
+</html>
