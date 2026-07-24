@@ -4,7 +4,6 @@
 }
 body{
     font-family: 'TNR', sans-serif;
-    font-size: 100%;
     text-align: left;
     margin-top: 3%;
     margin-left: 10%;
@@ -15,8 +14,8 @@ h3{
 }
 #name{
     font-size: 300%;
-    margin-bottom: 0%;
 }
+
 #bar{
     margin-bottom: 1%;
 }
@@ -24,25 +23,14 @@ h3{
     margin-bottom: 1%;
 }
 a{
-    color: #001caa;
+    color: #740019;
     text-decoration: none;
-    font-size: 110%;
+}
+a:hover{
+    text-decoration: underline;
 }
 .content{
     text-align: left;
     width: 65%;
-    font-size: 100%;
-    margin-bottom: 3%;
-}
-.journal{
-    text-align: left;
-    width: 65%;
-    font-size: 100%;
-    margin-bottom: 3%;
-}
-.maya-wiki-content{
-    text-align: left;
-    width: 65%;
-    font-size: 100%;
     margin-bottom: 3%;
 }
