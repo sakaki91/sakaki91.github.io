@@ -24,7 +24,6 @@
                 <a href="#function-about" style="margin-left: 1%;">2.2. Function '-a --about'</a><br>
                 <a href="#function-list" style="margin-left: 1%;">2.3. Function '-l --list'</a><br>
                 <a href="#function-list-installed" style="margin-left: 1%;">2.4. Function '-li --list-installed'</a><br>
-                <a href="#function-clean" style="margin-left: 1%;">2.5. Function '-cl --clean'</a><br>
                 <a href="#function-sync" style="margin-left: 1%;">2.6. Function '-sy --sync'</a><br>
                 <a href="#function-install" style="margin-left: 1%;">2.7. Function '-in --install'</a><br>
                 <a href="#function-remove" style="margin-left: 1%;">2.8. Function '-rm --remove'</a><br>
@@ -112,22 +111,6 @@
                 <div id="code">
                     $ ls /usr/local/share/maya/pkg/.info/<br>
                     discord fastfetch make onefetch vault
-                </div>
-
-                <h3 id="function-clean" style="text-decoration: underline;">Function '-cl | --clean'</h3>
-                When a binary is installed using Maya, Maya creates a temporary directory <strong>(/tmp/maya)</strong> precisely to "centralize" the tarballs/source-codes of the binaries.<br><br>
-
-                The function <strong>'-cl | --clean'</strong> serves precisely to clean this entire folder, for example:<br>
-                
-                <div id="code">
-                    $ ls /tmp/maya/<br>
-                    example1 example2 example3<br><br>
-
-                    $ maya --cl<br>
-                    [sudo] password:<br><br>
-
-                    $ ls /tmp/maya<br>
-                    ls: could not access '/tmp/maya': File or directory does not exist
                 </div>
                 
                 <h3 id="function-sync" style="text-decoration: underline;">Function '-sy | --sync'</h3>
