@@ -16,206 +16,182 @@
                 And, if removal is necessary, it also removes the binaries and all traces they leave behind.<br><br>
                 
                 You can find the source code for maya <a href="https://github.com/sakaki91/maya" target="_blank">here.</a><br><br>
+                <strong>Date of last revision: 07/29/2026</strong><br><br>
 
-                <a href="#installation"">1. Installation.</a><br>
+                <a href="#installation">1. Installation.</a><br>
                 <a href="#use">2. Use.</a><br>
                 <a href="#use-first-steps" style="margin-left: 1%;">2.1. First steps.</a><br>
                 <a href="#function-about" style="margin-left: 1%;">2.2. Function '-a --about'</a><br>
                 <a href="#function-list" style="margin-left: 1%;">2.3. Function '-l --list'</a><br>
                 <a href="#function-list-installed" style="margin-left: 1%;">2.4. Function '-li --list-installed'</a><br>
                 <a href="#function-clean" style="margin-left: 1%;">2.5. Function '-cl --clean'</a><br>
-                <a href="#function-sync" style="margin-left: 1%;">2.6. Function '-sy --sync-maya'</a><br>
+                <a href="#function-sync" style="margin-left: 1%;">2.6. Function '-sy --sync'</a><br>
                 <a href="#function-install" style="margin-left: 1%;">2.7. Function '-in --install'</a><br>
                 <a href="#function-remove" style="margin-left: 1%;">2.8. Function '-rm --remove'</a><br>
                 <a href="#uninstallation">3. Uninstallation.</a><br>
 
                 <h3 id="installation" style="text-decoration: underline;">Installation:</h3>
-                To install from source code, you will need the following dependencies:<br>
-                <pre>
-    coreutils, gcc, git, wget, tar</pre>
+                The Maya package manager has extremely explicit and mandatory dependencies, which are:<br>
+
+                <div id="code"><strong>coreutils, gcc, git, wget, tar</strong></div>
 
                 First, we will clone the repository:<br>
-                <pre>
-    $ git clone https://github.com/sakaki91/maya $HOME/maya.sources</pre>
+
+                <div id="code">$ git clone https://github.com/sakaki91/maya $HOME/maya.source</div>
                 
                 After that, we will enter the directory and run the installer:<br>
-                <pre>
-    $ cd $HOME/maya.sources
-    $ sudo ./install.sh</pre>
+
+                <div id="code">
+                    $ cd $HOME/maya.source<br>
+                    $ sudo ./install.sh
+                </div>
     
-    You must run the installer and Maya itself as root (EUID 0).<br><br>
-    <strong style="margin-left: 1%;">* But why?</strong><br>
-    <noname style="margin-left: 2.5%;">Maya has been completely migrated from <strong>$HOME/.local/{share,bin}</strong> (local) to <strong>/usr/local/{share,bin}</strong> (global).</noname><br>
+                You must run the installer and Maya itself as root <strong>(EUID 0)</strong>.<br>
 
                 <h3 id="use" style="text-decoration: underline;">Use:</h3>
-                <pre>
-    $ maya
-    :: usage: maya --help</pre>
 
-                <h3 id="use-first-steps" style="text-decoration: underline;">First steps:</h3>
-                To see all the arguments that can be used, run:<br>        
-                <pre>
-    $ maya -h
-    operations:
-    -h  | --help             :: show this message.
-    -v  | --version          :: shows the version.
-    -a  | --about            :: view the metadata (version, name, and description) of a package.
-    -l  | --list             :: shows all binaries available for installation.
-    -li | --list-installed   :: it shows everything that maya has installed.
-    -cl | --clean            :: clears the /tmp/maya directory.
-    -sy | --sync-maya        :: update maya and recipes by pulling directly from the git.
-    -in | --install          :: install a binary.
-    -rm | --remove           :: remove a binary.
-
-    usage: maya 'operation' [...]</pre>
-     
-                As you can see, everything is very legible and easy to understand.<br>
-                The next modules will provide some examples of how to use these modules.<br>
+                <div id="code">
+                    $ maya<br>
+                    error: -h for help
+                </div>
     
                 <h3 id="function-about" style="text-decoration: underline;">Function '-a | --about'</h3>
+
                 The <strong>'-a --about'</strong> function lists the metadata of the packages present in the <strong>/usr/local/share/maya/pkg/</strong> directory for installation, for example:<br>
-                <pre>
-    $ maya -a make
-    make :: 4.4.1             GNU make source code.
-    
-    $ maya -a discord
-    discord :: 1.0.149        All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.</pre>
+               
+                <div id="code">
+                    $ maya -a make<br>
+                    make-4.4.1:             <noname style="margin-left: 55px;">GNU make source code.</a><br><br>
+
+                    $ maya -a discord<br>
+                    discord-1.0.149:        <noname style="margin-left: 25px;">All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.</a>
+                </div>
                 
                 <h3 id="function-list" style="text-decoration: underline;">Function '-l | --list'</h3>
                 The function <strong>'-l | --list'</strong> lists all recipes contained in <strong>/usr/local/share/maya/pkg/</strong> that are available for installation, for example:<br>
-                <pre>
-    $ maya -l
-    cbonsai
-    cmake
-    discord
-    fastfetch
-    [...]</pre>
+
+                <div id="code">
+                    $ maya -l<br>
+                    cbonsai<br>
+                    cmake<br>
+                    discord<br>
+                    fastfetch<br>
+                    [...]
+                </div>
+
                 There is also a filtering option within the <strong>'-l | --list' function:</strong><br>
-                <pre>
-    $ maya -l fastfetch
-    fastfetch
-    neofetch
-    onefetch
-    pfetch</pre>
+
+                <div id="code">
+                    $ maya -l fastfetch<br>
+                    fastfetch<br>
+                    neofetch<br>
+                    onefetch<br>
+                    pfetch
+                </div>
                 
                 <h3 id="function-list-installed" style="text-decoration: underline;">Function '-li | --list-installed'</h3>
                 The function <strong>'-li | --list-installed'</strong> follows the same scheme as the previous function, but filters what was installed by the maya package manager.<br><br>
+
+
                 When installing a binary, maya creates a file in <strong>/usr/local/share/maya/pkg/info/</strong> to serve as a way to "track" what is installed.<br><br>
-                After installing the desired binaries, running <strong>'maya -li'</strong> will list what was tracked here previously, for example:<br>   
-                <pre>
-    $ maya -li 
-    discord
-    fastfetch
-    make
-    onefetch
-    vault</pre>
+
+
+                After installing the desired binaries, running <strong>'maya -li'</strong> will list what was tracked here previously, for example:<br>
+
+                <div id="code">
+                    $ maya -li<br>
+                    discord<br>
+                    fastfetch<br>
+                    make<br>
+                    onefetch<br>
+                    vault
+                </div>
 
                 And the "tracking" directory contains the following files:<br>
-                <pre>
-    $ ls /usr/local/share/maya/pkg/info/
-    discord  fastfetch  make  onefetch  vault</pre>
+
+                <div id="code">
+                    $ ls /usr/local/share/maya/pkg/.info/<br>
+                    discord fastfetch make onefetch vault
+                </div>
 
                 <h3 id="function-clean" style="text-decoration: underline;">Function '-cl | --clean'</h3>
-                When a binary is installed using Maya, Maya creates a temporary directory <strong>(/tmp/maya)</strong> precisely to "centralize" the tarballs/source-codes of the binaries.<br>
+                When a binary is installed using Maya, Maya creates a temporary directory <strong>(/tmp/maya)</strong> precisely to "centralize" the tarballs/source-codes of the binaries.<br><br>
+
                 The function <strong>'-cl | --clean'</strong> serves precisely to clean this entire folder, for example:<br>
-                <pre>
-    $ ls /tmp/maya/
-    example1  example2  example3
-
-    $ maya --cl
-    [sudo] password:
-
-    $ ls /tmp/maya
-    ls: could not access '/tmp/maya': File or directory does not exist</pre>
                 
-                <h3 id="function-sync" style="text-decoration: underline;">Function '-sy | --sync-maya'</h3>
-                The function <strong>'-sy | --sync-maya'</strong> is used to update maya, pulling its new changes directly from Git, along with ALL the new package recipes added.<br><br>
+                <div id="code">
+                    $ ls /tmp/maya/<br>
+                    example1 example2 example3<br><br>
 
-                Daily use of this function is recommended to always have the largest number of packages available for installation/compilation, example:<br>
-                <pre>
-    $ maya -sy
-    Already up to date.</pre>
+                    $ maya --cl<br>
+                    [sudo] password:<br><br>
+
+                    $ ls /tmp/maya<br>
+                    ls: could not access '/tmp/maya': File or directory does not exist
+                </div>
+                
+                <h3 id="function-sync" style="text-decoration: underline;">Function '-sy | --sync'</h3>
+                The <strong>'-sy | --sync'</strong> function is very important; it synchronizes Maya and recipes, as well as updating individual packages and all installed packages, for example:<br><br>
+                
+                Synchronize Maya and recipes:
+                <div id="code"> maya -sy </div>
+
+                Synchronize individual package:
+                <div id="code"> maya -sy package </div>
+
+                Synchronizes all installed packages:
+                    <div id="code"> maya -sy all </div>
 
                 <h3 id="function-install" style="text-decoration: underline;">Function '-in | --install'</h3>
                 The '-in | --install' function is one of the most important functions in Maya, *obviously*.<br>
                 Maya uses a philosophy and style somewhat reminiscent of FreeBSD Ports, but with an EXTREME and RELENTLESS focus on tracking orphaned packages/files during installations and removals.<br><br>
+
                 And, obviously, following the style of *Ports*, the installation of binaries/programs will depend heavily on your hardware, precisely because ABSOLUTELY EVERYTHING IS COMPILED FROM SCRATCH (or almost everything), there are no ready-made repositories or binaries, only predefined recipes that Maya can read.<br><br>
 
                 Below is an example of an installation:<br>
-                <pre>
-    $ maya -in pfetch</pre>
+
+                <div id="code"> $ maya -in pfetch </div>
+
                 The standard pfetch recipe below is shown as an example:<br>
-                <pre>
-    $ cat /usr/local/share/maya/pkg/pfetch
-    #!/bin/bash
+                
+                <div id="code">
+                    $ cat /usr/local/share/maya/pkg/pfetch<br>
+                    #!/bin/bash<br><br>
 
-    NAME="pfetch"
-    VERSION="0.6.0"
-    DESCRIPTION="A pretty system information tool written in POSIX sh."
-    SOURCE='https://github.com/dylanaraps/pfetch'
-    DEPENDENCIES=(
-        "git"
-    )
+                    NAME="pfetch"<br>
+                    VERSION="0.6.0"<br>
+                    DESCRIPTION="A pretty system information tool written in POSIX sh."<br>
+                    SOURCE='https://github.com/dylanaraps/pfetch'<br>
+                    DEPENDENCIES=(<br>
+                    <noname style="margin-left:50px;"/>"git"<br>
+                    )<br><br>
 
-    function install(){
-        git clone $SOURCE /tmp/maya/$NAME
-        /usr/bin/install /tmp/maya/$NAME/$NAME /usr/bin/$NAME
-    }
+                    function install(){<br>
+                    <noname style="margin-left:50px;"/>git clone $SOURCE /tmp/maya/$NAME<br>
+                    <noname style="margin-left:50px;"/>/usr/bin/install /tmp/maya/$NAME/$NAME /usr/bin/$NAME<br>
+                    }<br><br>
 
-    function remove(){
-        rm -rf /bin/$NAME "$MAYA_TMP/$NAME"
-    }</pre>
-                This example was used precisely because of its simplicity; however, more complex projects like <strong>make</strong> have more complex recipes, for example:<br>
-                <pre>
-    $ cat /usr/local/share/maya/pkg/make
-     
-    #!/bin/bash
+                    function remove(){<br>
+                    <noname style="margin-left:50px;"/>rm -rf /bin/$NAME "$MAYA_TMP/$NAME"<br>
+                    }
+                </div>
 
-    NAME="make"
-    VERSION="4.4.1"
-    DESCRIPTION="GNU make source code."
-    SOURCE="https://ftp.gnu.org/gnu/$NAME/$NAME-$VERSION.tar.gz"
-    DEPENDENCIES=(
-        "wget"
-        "tar"
-        "gcc"
-    )
+            This means that ANYONE can contribute if they want, without actually needing a ready-made repository, as long as everything is filled in correctly.<br>
 
-    function install(){
-        wget -c $SOURCE --directory-prefix=/tmp/maya/$NAME
-        tar -xvf /tmp/maya/$NAME/$NAME-$VERSION.tar.gz --directory=/tmp/maya/$NAME
-        (
-            cd /tmp/maya/$NAME/$NAME-$VERSION
-            ./configure --disable-dependency-tracking
-            ./build.sh
-            ./make
-            ./make install
-        )
-    }
+            If you are interested, there is a <strong>package-template.sh</strong> file in <strong>/usr/local/share/maya/src/package-template.sh</strong><br>
 
-    function remove(){
-        LOCALE="/usr/local/share/locale"
-        rm -f /usr/local/bin/make
-        rm -f /usr/local/include/gnumake.h
-        rm -f /usr/local/share/man/man1/make.1
-        rm -f /usr/local/share/info/{make.info,make.info-1,make.info-2,make.info-3}
-        rm -rf $LOCALE/*/LC_MESSAGES/make.mo
-    }</pre>
-                This means that ANYONE can contribute if they want, without actually needing a ready-made repository, as long as everything is filled in correctly.<br>
-                If you are interested, there is a <strong>package-template.sh</strong> file in <strong>/usr/local/share/maya/src/package-template.sh</strong><br>
+            <h3 id="function-remove" style="text-decoration: underline;">Function '-rm | --remove'</h3>
+            The <strong>'-rm | --remove'</strong> function is also extremely important, as it performs a RELENTLESS cleanup of ALL POSSIBLE ORPHAN FILES from the desired binary, for example:<br>
 
-                <h3 id="function-remove" style="text-decoration: underline;">Function '-rm | --remove'</h3>
-                The <strong>'-rm | --remove'</strong> function is also extremely important, as it performs a RELENTLESS cleanup of ALL POSSIBLE ORPHAN FILES from the desired binary, for example:<br>
-                <pre>
-    $ maya -rm pfetch</pre>
-                Remember that both <strong>'-in'</strong> and <strong>'-rm'</strong> only work for files that were installed/removed by maya, as they have their own internal registry <strong>/usr/local/share/maya/pkg/info</strong>
+            <div id="code"> $ maya -rm pfetch </div>
 
-                <h3 id="uninstallation" style="text-decoration: underline;">Uninstallation:</h3>
-                Removing maya is relatively straightforward because, just as I follow an extremely paranoid philosophy regarding orphaned files scattered throughout the file system, ALL of maya (if installed correctly following the Wiki) has ALL its main files centralized in <strong>/usr/local/share/maya</strong>, with a temporary directory in <strong>/tmp/maya</strong>, and a global binary in <strong>/usr/local/bin/maya.</strong><br><br>
+            Remember that both <strong>'-in'</strong> and <strong>'-rm'</strong> only work for files that were installed/removed by maya, as they have their own internal registry <strong>/usr/local/share/maya/pkg/.info</strong>
+
+            <h3 id="uninstallation" style="text-decoration: underline;">Uninstallation:</h3>
+            Removing maya is relatively straightforward because, just as I follow an extremely paranoid philosophy regarding orphaned files scattered throughout the file system, ALL of maya (if installed correctly following the Wiki) has ALL its main files centralized in <strong>/usr/local/share/maya</strong>, with a temporary directory in <strong>/tmp/maya</strong>, and a global binary in <strong>/usr/local/bin/maya.</strong><br><br>
 
                 In short, to completely remove Maya, simply run:<br>
-                <pre>
-    $ rm -rf /usr/local/share/maya /usr/local/bin/maya /tmp/maya</pre>                
+                <div id="code"> $ rm -rf /usr/local/share/maya /usr/local/bin/maya /tmp/maya </div>
                 I STRONGLY recommend that in cases of uninstallation, you also remove the packages installed by Maya, as it will not be possible to maintain them (unless it is intentional).
             </div>
     </body>

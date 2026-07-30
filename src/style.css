@@ -29,6 +29,14 @@ a{
 a:hover{
     text-decoration: underline;
 }
+#code{
+    background-color: #f7f5f5;
+    color: #222222;
+    font-size: 95%;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 0px;
+}
 .content{
     text-align: left;
     width: 65%;
