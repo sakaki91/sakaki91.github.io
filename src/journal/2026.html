@@ -17,60 +17,117 @@
             <a href="2026.html" style="text-decoration: underline;">2026</a> :: <a href="2027.html" style="text-decoration: underline;">2027</a>
         </div>
         <div class="content">
-            <strong style="text-decoration: underline;">07/22/2026 - 00:48AM:</strong><br>
-            I just finished writing the complete Maya (package manager) wiki "in one go," and I confess that it all seems a bit insane to me, both in terms of documentation and development speed.<br>
-            This surpassed all other projects I've had so far in terms of maintenance and documentation. And another thing, I'm learning A LOT, A LOT, which is great. Looking at everything that's been built so far...<br>
-            I'm even a little scared, because in just 2 days I built a ports-like package manager from scratch and completely documented it ALL BY MYSELF.<br><br>
+            <strong style="text-decoration: underline;">07/29/2026 - 09:33PM</strong><br>
+            <p>
+                Hello everyone! It's been a few days since my last post.
+                Recently I've been very hyper-focused, both with Maya and smaller projects, and even optimizing my code, like my website, Vault, and atl (about-this-linux, a simple system fetch).
+            </p>
+            <p>
+                Maya is becoming increasingly complex and difficult to maintain. A few days ago, the idea of a way to update packages haunted me, because how exactly would that be done? But I managed to implement a good solution that synchronizes recipes with the latest versions and compares them with the installed ones.
+            </p>
+            In Git recipes, there's a warning saying that there might not be updates, but that it will be done anyway.<br><br>
+
+            All of this is still being implemented and polished, but it's already completely functional!<br><br>
+
+            And another REALLY COOL thing is that I'm finally managing to learn the C language in a "not so painful" way.<br>
+            <p>
+                I think I got so involved that even terms that are reasonably insurmountable for me because of the "roughness" of the language (like argc, argv[]) were finally truly understood.
+            </p>
+            <p>
+                Yesterday I studied C quite a bit and, for the first time since studying, I just used my cell phone (for entertainment), and I started thinking specifically about the language and its inner workings: Linux/UNIX system calls, input/output, user interactions, conditionals, formulas, libraries... among many other things.
+            </p>
+
+            Which is perfect for me, since C has always been my "dream language".<br>
+    
+            <br>
+
+            <strong style="text-decoration: underline;">07/22/2026 - 12:48AM:</strong><br>
+            <p>
+                I just finished writing the complete Maya (package manager) wiki "in one go," and I confess that it all seems a bit insane to me, both in terms of documentation and development speed.
+            </p>
+            <p>
+                This surpassed all other projects I've had so far in terms of maintenance and documentation. And another thing, I'm learning A LOT, A LOT, which is great. Looking at everything that's been built so far...
+            </p>
+            <p>
+                I'm even a little scared, because in just 2 days I built a ports-like package manager from scratch and completely documented it ALL BY MYSELF.
+            </p>
             
-            <a href="https://github.com/sakaki91/maya" target="_blank">Maya.</a><br>
-            <a href="https://sakaki91.github.io/src/maya-wiki.html">Maya Wiki.</a><br>
+            <a href="https://github.com/sakaki91/maya" target="_blank">> maya</a><br>
+            <a href="https://sakaki91.github.io/src/maya-wiki.html">> maya wiki</a><br>
 
             <br>
 
             <strong style="text-decoration: underline;">07/20/2026 - 12:30PM:</strong><br>
-            Last night I decided to start a new project (Maya, a ports-like package manager written in bash, using a "recipe" scheme per package).<br>
+            <p>
+                Last night I decided to start a new project (Maya, a ports-like package manager written in bash, using a "recipe" scheme per package).
+            </p>
             I was so tired that I couldn't update my blog; I'm extremely focused on this.<br>
             I also had contact with the community, and it was disappointing and stupid.<br>
-            Comments like "Why not use ready-made package managers?" or "Why not use Gentoo if you want to learn?" are so vulgar, as if there were a linear path to learning.<br>
-            In the end, I preferred to delete the post and my Reddit account to abstain from this idiocy and the community.<br><br>
+            <p>
+                Comments like "Why not use ready-made package managers?" or "Why not use Gentoo if you want to learn?" are so vulgar, as if there were a linear path to learning.
+            </p>
+            In the end, I preferred to delete the post and my Reddit account to abstain from this idiocy and the community.<br>
+            <p>
+                I use pacman daily, but I'm writing Maya for two main reasons: the first is study, because I need to think in an extremely abstract way and handle ALL TYPES OF ERRORS AND DEPENDENCIES (it's no coincidence that GCC is my biggest nightmare right now), and to be a distro-agnostic package manager, very much in the ports style.
+            </p>
 
-            I use pacman daily, but I'm writing Maya for two main reasons: the first is study, because I need to think in an extremely abstract way and handle ALL TYPES OF ERRORS AND DEPENDENCIES (it's no coincidence that GCC is my biggest nightmare right now), and to be a distro-agnostic package manager, very much in the ports style.<br><br>
-
-            <a href="https://github.com/sakaki91/maya" target="_blank">Maya.</a><br>
+            <a href="https://github.com/sakaki91/maya" target="_blank">> maya</a><br>
 
             <br>
 
-            <strong style="text-decoration: underline;">06/11/2026 - 5:27PM:</strong><br>
-            Last night was the last straw for me, I officially ended the awl (Arcade.Wrapper-Linux) cycle, its development had been slow for a thousand reasons.<br>
-            The main reasons are that I developed a hatred for the original project (TeknoParrot), for its creators and for my own project, they have a DLL with an "anti-debug" syscall that acts by "obfuscating" the mapping (which was often done desperately in the dark).<br>
-            And another reason was because I was going crazy alone, I mapped more than 50 games in about 4 months completely, I didn't have support or help from a single good soul in the community, I'm not going to screw myself over alone in this while the assholes from the original project are neglecting it and still getting paid for it.<br><br>
-            I'm tired.<br><br>
-            My focus has returned entirely to my studies in C/ASM, and to the free development of Vault, my lightweight mini-launcher CLI for games and Wine programs, AppImages, and Tarballs for Unix-like systems.<br>
+            <strong style="text-decoration: underline;">06/11/2026 - 05:27PM:</strong><br>
+            <p>
+                Last night was the last straw for me, I officially ended the awl (Arcade.Wrapper-Linux) cycle, its development had been slow for a thousand reasons.
+            </p>
+            <p>
+                The main reasons are that I developed a hatred for the original project (TeknoParrot), for its creators and for my own project, they have a DLL with an "anti-debug" syscall that acts by "obfuscating" the mapping (which was often done desperately in the dark).
+            </p>
+            <p>
+                And another reason was because I was going crazy alone, I mapped more than 50 games in about 4 months completely, I didn't have support or help from a single good soul in the community, I'm not going to screw myself over alone in this while the assholes from the original project are neglecting it and still getting paid for it.
+            </p>
+
+            I'm tired.<br>
+
+            <p>
+                My focus has returned entirely to my studies in C/ASM, and to the free development of Vault, my lightweight mini-launcher CLI for games and Wine programs, AppImages, and Tarballs for Unix-like systems.
+            </p>
             
             <br>
 
-            <strong style="text-decoration: underline;">06/01/2026 - 2:49PM:</strong><br>
-            Today, I started a new project, but I got so tired and hyper-focused that I even forgot to talk about it in my Journal.<br>
-            It's nothing extremely complex, but it's extremely necessary.<br><br>
-            Initially, all my projects start as a solution to my own problems, but I always keep the code open and public in case someone is interested or has a similar problem.<br>
-            Anyway... the project's name is Vault. It's an extremely small and lightweight "mini launcher CLI" for games and programs, being extremely useful for non-Steam games and old Wine games, but completely usable in modern games, as long as the user knows how to prepare their own prefix after Vault creates it.<br><br>
+            <strong style="text-decoration: underline;">06/01/2026 - 02:49PM:</strong><br>
+            <p>
+                Today, I started a new project, but I got so tired and hyper-focused that I even forgot to talk about it in my Journal.
+            </p>
+            It's nothing extremely complex, but it's extremely necessary.<br>
+            <p>
+                Initially, all my projects start as a solution to my own problems, but I always keep the code open and public in case someone is interested or has a similar problem.
+            </p>
+            <p>
+                Anyway... the project's name is Vault. It's an extremely small and lightweight "mini launcher CLI" for games and programs, being extremely useful for non-Steam games and old Wine games, but completely usable in modern games, as long as the user knows how to prepare their own prefix after Vault creates it.
+            </p>
 
-            Vault: https://github.com/sakaki91/vault<br>
+            <a href="https://github.com/sakaki91/vault">> vault</a><br>
            
             <br>
 
             <strong style="text-decoration: underline;">05/28/2026 - 10:30PM:</strong><br>
-            I started exploring the idea of ​​a "Journal" using a plain text style, and I confess that after leaving Markdown aside, the simple text aesthetic appeals to me quite a bit.<br>
+            <p>
+                I started exploring the idea of a "Journal" using a plain text style, and I confess that after leaving Markdown aside, the simple text aesthetic appeals to me quite a bit.
+            </p>
             I recently unarchived my old projects (Sakaki-AC-Linux-Guide and EFI-Haswell-RX550-Lexa);<br>
-            while in the AC guide I included an experimental autoinstall script, and rewrote the README in the classic style.<br><br>
-            As for EFI-Haswell-RX550-Lexa, I only corrected some typos.<br><br>
-            Meanwhile, AWL (Arcade.Wrapper-Linux) has been giving me a lot of trouble, precisely because I'm mapping something difficult
-            (especially for me), completely alone. I've been procrastinating a lot lately, and some specific titles scare me, as does the idea that Linux is extremely fragmented.<br>
-            And because at any moment something could break, and I might not be able to fix it again, that's precisely why I maintain the GPL3, because unlike the MIT License (which I use in Dotfiles), this should remain free, and if I disappear in the future, anyone can continue from where I left off.<br><br>
+            while in the AC guide I included an experimental autoinstall script, and rewrote the README in the classic style.<br>
+
+            As for EFI-Haswell-RX550-Lexa, I only corrected some typos.<br>
+            <p>
+                Meanwhile, AWL (Arcade.Wrapper-Linux) has been giving me a lot of trouble, precisely because I'm mapping something difficult (especially for me), completely alone. I've been procrastinating a lot lately, and some specific titles scare me, as does the idea that Linux is extremely fragmented.
+            </p>
+            <p>
+            And because at any moment something could break, and I might not be able to fix it again, that's precisely why I maintain the GPL3, because unlike the MIT License (which I use in Dotfiles), this should remain free, and if I disappear in the future, anyone can continue from where I left off.
+            </p>
             <strong style="text-decoration: underline;">You can check the latest changes at:</strong><br>
-            <a href="https://github.com/sakaki91/Sakaki-AC-Linux-Guide">Sakaki-AC-Linux-Guide</a><br>
-            <a href="https://github.com/sakaki91/EFI-Haswell-RX550-Lexa">EFI-Haswell-RX550-Lexa</a><br>
-            <a href="https://github.com/sakaki91/Arcade.Wrapper-Linux">Arcade.Wrapper-Linux</a><br>
+            <a href="https://github.com/sakaki91/Sakaki-AC-Linux-Guide">> Sakaki-AC-Linux-Guide</a><br>
+            <a href="https://github.com/sakaki91/EFI-Haswell-RX550-Lexa">> EFI-Haswell-RX550-Lexa</a><br>
+            <a href="https://github.com/sakaki91/Arcade.Wrapper-Linux">> Arcade.Wrapper-Linux</a><br>
         </div>
     </body>
 </html>
