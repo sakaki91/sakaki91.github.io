@@ -26,7 +26,7 @@
                 </p>
                 
                 You can find the source code for maya <a href="https://github.com/sakaki91/maya" target="_blank">here.</a><br><br>
-                <strong>Date of last revision: <noname style="text-decoration: underline;">07/30/2026 - 11:01AM</noname></strong><br><br>
+                <strong>Date of last revision: <noname style="text-decoration: underline;">08/01/2026 - 12:56AM</noname></strong><br><br>
 
                 <a href="#installation">1. Installation.</a><br>
                 <a href="#use">2. Use.</a><br>
@@ -48,15 +48,13 @@
 
                 <p>First, we will clone the repository:</p>
 
-                <div id="code"><strong>$ git clone https://github.com/sakaki91/maya $HOME/maya.source</strong></div>
+                <div id="code">$ git clone https://github.com/sakaki91/maya $HOME/maya.source</div>
                 
                 <p>After that, we will enter the directory and run the installer:</p>
 
                 <div id="code">
-                    <strong>
-                        $ cd $HOME/maya.source<br>
-                        $ sudo ./install.sh
-                    </strong>
+                    $ cd $HOME/maya.source<br>
+                    $ sudo ./install.sh
                 </div>
     
                 <p>You must run the installer and Maya itself as root <strong>(EUID 0)</strong>.</p>
@@ -65,7 +63,7 @@
                 <p>To list all available functions, type:</p>
 
                 <div id="code">
-                    <strong>$ maya</strong><br>
+                    $ maya<br>
                     <div class="generic">error: -h for help</div>
                 </div> 
     
@@ -75,20 +73,23 @@
                 </p>
                
                 <div id="code">
-                    <strong>$ maya -a make</strong><br>
+                    $ maya -a make<br>
                     <div class="generic">make-4.4.1:             <noname style="margin-left: 55px;">GNU make source code.</noname></div><br><br>
 
-                    <strong>$ maya -a discord</strong><br>
+                    $ maya -a discord<br>
                     <div class="generic">discord-1.0.149:        <noname style="margin-left: 25px;">All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.</div>
                 </div>
-                
+                Or you can also check all these packages:
+                <div id="code">
+                    $ maya -a all
+                </div>
                 <h4 id="function-list" style="text-decoration: underline;">Function '-l | --list'</h4>
                 <p>
                     The function <strong>'-l | --list'</strong> lists all recipes contained in <strong>/usr/local/share/maya/pkg/</strong> that are available for installation, for example:
                 </p>
 
                 <div id="code">
-                    <strong>$ maya -l</strong><br>
+                    $ maya -l<br>
                     <div class="generic">
                         cbonsai<br>
                         cmake<br>
@@ -101,7 +102,7 @@
                 <p> There is also a filtering option within the <strong>'-l | --list' function:</strong></p>
 
                 <div id="code">
-                    <strong>$ maya -l fastfetch</strong><br>
+                    $ maya -l fastfetch<br>
                     <div class="generic">
                         fastfetch<br>
                         neofetch<br>
@@ -124,7 +125,7 @@
                 </p>
 
                 <div id="code">
-                    <strong>$ maya -li</strong><br>
+                    $ maya -li<br>
                     <div class="generic">
                         discord<br>
                         fastfetch<br>
@@ -137,7 +138,7 @@
                 <p>And the "tracking" directory contains the following files:</p>
 
                 <div id="code">
-                    <strong>$ ls /usr/local/share/maya/pkg/.info/</strong><br>
+                    $ ls /usr/local/share/maya/pkg/.info/<br>
                     <div class="generic">discord fastfetch make onefetch vault</div>
                 </div>
                 
@@ -147,13 +148,13 @@
                 </p>
                 
                 Synchronize Maya and recipes:
-                <div id="code"><strong> $ maya -sy </strong></div>
+                <div id="code">$ maya -sy</div>
 
                 Synchronize individual package:
-                <div id="code"><strong> $ maya -sy package </strong></div>
+                <div id="code">$ maya -sy package</div>
 
                 Synchronizes all installed packages:
-                <div id="code"><strong> $ maya -sy all </strong></div>
+                <div id="code">$ maya -sy all</div>
 
                 <h4 id="function-install" style="text-decoration: underline;">Function '-in | --install'</h4>
                 <p>
@@ -169,12 +170,12 @@
 
                 <p> Below is an example of an installation:</p>
 
-                <div id="code"><strong> $ maya -in pfetch </strong></div>
+                <div id="code">$ maya -in pfetch</div>
 
                 <p>The standard pfetch recipe below is shown as an example:</p>
                 
                 <div id="code">
-                    <strong>$ cat /usr/local/share/maya/pkg/pfetch</strong><br>
+                    $ cat /usr/local/share/maya/pkg/pfetch<br>
                     <div class="generic">
                         #!/bin/bash</noname><br><br>
                         NAME="pfetch"<br>
@@ -211,7 +212,7 @@
                 The <strong>'-rm | --remove'</strong> function is also extremely important, as it performs a RELENTLESS cleanup of ALL POSSIBLE ORPHAN FILES from the desired binary, for example:
             </p>
 
-            <div id="code"><strong> $ maya -rm pfetch </strong></div>
+            <div id="code">$ maya -rm pfetch</div>
 
             <p>
                 Remember that both <strong>'-in'</strong> and <strong>'-rm'</strong> only work for files that were installed/removed by maya, as they have their own internal registry <strong>/usr/local/share/maya/pkg/.info</strong>
@@ -223,7 +224,7 @@
             </p>
 
             <div id="code">
-                <strong>$ maya -rs</strong><br>
+                $ maya -rs<br>
                 <div class="generic">
                     ok: atl.<br>
                     ok: bzip3.<br>
@@ -234,11 +235,10 @@
                     ok: onefetch.<br>
                     ok: vault.<br><br>
                 
-                    <strong>
-                        $ command -v minecraft-launcher ; command -v minecraft<br>
-                        $ sudo maya -rm minecraft<br><br>
-                        $ maya -rs
-                    </strong><br>
+                    $ command -v minecraft-launcher ; command -v minecraft<br>
+                    $ sudo maya -rm minecraft<br><br>
+                    $ maya -rs
+                    <br>
                 
                     ok: atl.<br>
                     ok: bzip3.<br>
@@ -261,7 +261,7 @@
 
                 In short, to completely remove Maya, simply run:<br>
 
-                <div id="code"><strong> $ rm -rf /usr/local/share/maya /usr/local/bin/maya /tmp/maya </strong></div>
+                <div id="code">$ rm -rf /usr/local/share/maya /usr/local/bin/maya /tmp/maya</div>
                 <p>
                     I STRONGLY recommend that in cases of uninstallation, you also remove the packages installed by Maya, as it will not be possible to maintain them (unless it is intentional).
                 </p>

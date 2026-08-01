@@ -25,7 +25,6 @@ a:hover{
 #code{
     box-sizing: border-box;
     background-color: #e8e8e8;
-    color: #222222;
     font-size: 95%;
     padding: 0.8%;
     margin-top: 0.5%;
@@ -41,6 +40,10 @@ a:hover{
     margin-left: 0.5%;
     margin-right: 0.5%;
     margin-bottom: 1.0%;
+}
+.journal-content{
+    padding: 1%;
+    margin-bottom: 0%;
 }
 .content-generic{
     box-sizing: border-box;
