@@ -41,7 +41,7 @@ a:hover{
     border: 1px solid #dbdbdb; 
     margin-left: 0.5%;
     margin-right: 0.5%;
-    margin-bottom: 1.0%;
+    margin-bottom: 1.5%;
     box-shadow: 3px 5px #e6e3e3;
 }
 .journal-content{
@@ -67,5 +67,5 @@ a:hover{
     margin-top: 1.0%;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    margin-bottom: 1%;
+    margin-bottom: 1.5%;
 }
