@@ -31,16 +31,18 @@ a:hover{
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     border: 1px solid #dbdbdb;
+    box-shadow: 3px 5px #e6e3e3;
     width: 65%;
 }
 .content{
     box-sizing: border-box;
     background-color: #f7f5f5;
     padding: 1%;
-    border: 1px solid #dbdbdb;
+    border: 1px solid #dbdbdb; 
     margin-left: 0.5%;
     margin-right: 0.5%;
     margin-bottom: 1.0%;
+    box-shadow: 3px 5px #e6e3e3;
 }
 .journal-content{
     padding: 0%;
@@ -52,6 +54,7 @@ a:hover{
     background-color: #f7f5f5;
     padding: 1%;
     border: 1px solid #dbdbdb;
+    box-shadow: 3px 5px #e6e3e3;
     margin-top: -0.6%;
     margin-bottom: 0.5%;
 }
@@ -60,8 +63,9 @@ a:hover{
     background-color: #f7f5f5;
     padding: 1%;
     border: 1px solid #dbdbdb;
+    box-shadow: 3px 5px #e6e3e3;
     margin-top: 1.0%;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    margin-bottom: 0.5%;
+    margin-bottom: 1%;
 }
