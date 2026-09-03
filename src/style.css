@@ -9,6 +9,7 @@ body{
 }
 h3{
     margin-bottom: -7px;
+    text-decoration: underline;
 }
 a{
     color: #740019;
@@ -16,17 +17,15 @@ a{
 }
 a:hover{
     text-decoration: underline;
-    font-size: 101%;
 }
 hr{
     color: #f1f1f1;
 }
 .content{
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 450px;
-    margin-right: 450px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
 }
 .journal-content{
     box-sizing: border-box;
