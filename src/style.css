@@ -1,14 +1,15 @@
 @font-face {
-  font-family: 'TNR';
-  src: url('times.ttf');
+  font-family: 'custom';
+  src: url('custom.ttf');
 }
 body{
-    font-family: 'TNR', sans-serif;
+    font-family: 'custom', sans-serif;
     text-align: center;
-    color: #333333;
+    background-color: #ffffff;
+    color: #1b1a16;
 }
-h3{
-    margin-bottom: -7px;
+h4{
+    margin-bottom: 5px;
     text-decoration: underline;
 }
 a{
@@ -18,30 +19,10 @@ a{
 a:hover{
     text-decoration: underline;
 }
-hr{
-    color: #f1f1f1;
-    background-color: #f7f5f5;
-    border: 1px solid #d5d3d3;
-}
-.code{
-    padding: 0.5%;
-    background-color: #f7f5f5;
-    border: 1px solid #dbdbdb;
-}
-.generic{
-    color: rgb(25, 25, 25);
-}
 .content{
     text-align: left;
     margin-top: 1%;
     margin-left: 1%;
     margin-right: 1%;
     margin-bottom: 1%;
-}
-.journal-content{
-    box-sizing: border-box;
-    margin-top: 10px;
-    padding: 1%;
-    background-color: #f7f5f5;
-    border: 1px solid #dbdbdb;
 }
