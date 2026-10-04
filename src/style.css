@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'custom';
-  src: url('custom.ttf');
+  font-family: 'font.ttf';
+  src: url('font.ttf');
 }
 body{
-    font-family: 'custom', sans-serif;
+    font-family: 'font.ttf', sans-serif;
     text-align: center;
     background-color: #ffffff;
     color: #1b1a16;
 }
 h4{
-    margin-bottom: 5px;
+    margin-bottom: -10px;
     text-decoration: underline;
 }
 a{
